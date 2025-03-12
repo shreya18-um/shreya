@@ -1,3 +1,11 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -5,10 +13,25 @@ body {
     color: white;
 }
 
+/* Sidebar */
 .sidebar {
     width: 20%;
     background: #161625;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6b81;
+}
+
+.sidebar ul {
+    list-style: none;
 }
 
 .sidebar ul li {
@@ -16,13 +39,31 @@ body {
     cursor: pointer;
     text-align: center;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 .sidebar ul li:hover {
     background: #ff6b81;
-    border-radius: 5px;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6b81;
+}
+
+/* Main Content */
 .main-content {
     width: 80%;
     padding: 40px;
@@ -38,6 +79,7 @@ body {
     animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -49,20 +91,157 @@ body {
     }
 }
 
-.experience-container {
+/* About Me */
+.profile-section {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.experience-block, .project-block {
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Education */
+.education-block {
     background: #222;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.university-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-category {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Experience */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-block {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Projects */
 .project-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+}
+
+.project-block {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.project-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* File Uploads */
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+label {
+    font-size: 14px;
+    color: #ff6b81;
+}
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact button {
+    background: #ff6b81;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background: #ff4b65;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sidebar ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
