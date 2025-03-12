@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li onclick="showTab('about')">About Me</li>
+            <li onclick="showTab('education')">Education</li>
+            <li onclick="showTab('skills')">Skills</li>
+            <li onclick="showTab('experience')">Experience</li>
+            <li onclick="showTab('projects')">Projects</li>
+            <li onclick="showTab('publications')">Publications</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- About Me -->
+        <div id="about" class="tab active">
+            <div class="background-upload">
+                <input type="file" id="bgUpload" accept="image/png" onchange="previewImage(event, 'bgPreview')">
+                <div id="bgPreview" class="background-preview">Upload Background</div>
+            </div>
+            <div class="profile-section">
+                <input type="file" id="profileUpload" accept="image/png" onchange="previewImage(event, 'profilePreview')">
+                <img id="profilePreview" class="profile-pic" src="" alt="Upload Profile Picture">
+            </div>
+            <textarea placeholder="Write about yourself here..."></textarea>
+        </div>
+
+        <!-- Education -->
+        <div id="education" class="tab">
+            <div class="education-block">
+                <input type="file" accept="image/png" onchange="previewImage(event, 'eduLogo1')">
+                <img id="eduLogo1" class="university-logo" src="" alt="Upload Logo">
+                <input type="text" placeholder="University Name">
+                <input type="text" placeholder="Degree">
+                <input type="text" placeholder="Cumulative GPA">
+            </div>
+            <div class="education-block">
+                <input type="file" accept="image/png" onchange="previewImage(event, 'eduLogo2')">
+                <img id="eduLogo2" class="university-logo" src="" alt="Upload Logo">
+                <input type="text" placeholder="University Name">
+                <input type="text" placeholder="Degree">
+                <input type="text" placeholder="Cumulative GPA">
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills" class="tab">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <textarea placeholder="Add skills..."></textarea>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <textarea placeholder="Add skills..."></textarea>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <textarea placeholder="Add skills..."></textarea>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <textarea placeholder="Add skills..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects" class="tab">
+            <div class="project-block">
+                <input type="text" placeholder="Project Name">
+                <input type="file" accept="image/png">
+                <input type="file" accept=".ppt, .pptx">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function previewImage(event, elementId) {
+            const file = event.target.files[0];
+            if (file) {
+                document.getElementById(elementId).src = URL.createObjectURL(file);
+            }
+        }
+    </script>
+
+</body>
+</html>
