@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -18,7 +19,13 @@
             <li onclick="showTab('experience')">Experience</li>
             <li onclick="showTab('projects')">Projects</li>
             <li onclick="showTab('publications')">Publications</li>
+            <li onclick="showTab('contact')">Contact</li>
         </ul>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -26,64 +33,98 @@
 
         <!-- About Me -->
         <div id="about" class="tab active">
-            <div class="background-upload">
-                <input type="file" id="bgUpload" accept="image/png" onchange="previewImage(event, 'bgPreview')">
-                <div id="bgPreview" class="background-preview">Upload Background</div>
-            </div>
+            <h2>About Me</h2>
             <div class="profile-section">
                 <input type="file" id="profileUpload" accept="image/png" onchange="previewImage(event, 'profilePreview')">
                 <img id="profilePreview" class="profile-pic" src="" alt="Upload Profile Picture">
             </div>
-            <textarea placeholder="Write about yourself here..."></textarea>
+            <textarea placeholder="Write about yourself here..." id="summary"></textarea>
         </div>
 
         <!-- Education -->
         <div id="education" class="tab">
+            <h2>Education</h2>
             <div class="education-block">
                 <input type="file" accept="image/png" onchange="previewImage(event, 'eduLogo1')">
                 <img id="eduLogo1" class="university-logo" src="" alt="Upload Logo">
                 <input type="text" placeholder="University Name">
                 <input type="text" placeholder="Degree">
                 <input type="text" placeholder="Cumulative GPA">
-            </div>
-            <div class="education-block">
-                <input type="file" accept="image/png" onchange="previewImage(event, 'eduLogo2')">
-                <img id="eduLogo2" class="university-logo" src="" alt="Upload Logo">
-                <input type="text" placeholder="University Name">
-                <input type="text" placeholder="Degree">
-                <input type="text" placeholder="Cumulative GPA">
+                <input type="text" placeholder="From - To">
             </div>
         </div>
 
         <!-- Skills -->
         <div id="skills" class="tab">
+            <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <textarea placeholder="Add skills..."></textarea>
+                <div class="skill-category"><h3>Programming</h3><textarea placeholder="Add skills..."></textarea></div>
+                <div class="skill-category"><h3>Frameworks</h3><textarea placeholder="Add skills..."></textarea></div>
+                <div class="skill-category"><h3>Tools</h3><textarea placeholder="Add skills..."></textarea></div>
+                <div class="skill-category"><h3>Soft Skills</h3><textarea placeholder="Add skills..."></textarea></div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div id="experience" class="tab">
+            <h2>Experience</h2>
+            <div class="experience-container">
+                <div class="experience-block">
+                    <h3>Experience 1</h3>
+                    <input type="text" placeholder="Company Name">
+                    <input type="text" placeholder="Job Title">
+                    <input type="text" placeholder="Location">
+                    <input type="text" placeholder="Skills Gained">
+                    <textarea placeholder="Job Description"></textarea>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <textarea placeholder="Add skills..."></textarea>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <textarea placeholder="Add skills..."></textarea>
-                </div>
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <textarea placeholder="Add skills..."></textarea>
+                <div class="experience-block">
+                    <h3>Experience 2</h3>
+                    <input type="text" placeholder="Company Name">
+                    <input type="text" placeholder="Job Title">
+                    <input type="text" placeholder="Location">
+                    <input type="text" placeholder="Skills Gained">
+                    <textarea placeholder="Job Description"></textarea>
                 </div>
             </div>
         </div>
 
         <!-- Projects -->
         <div id="projects" class="tab">
-            <div class="project-block">
-                <input type="text" placeholder="Project Name">
-                <input type="file" accept="image/png">
-                <input type="file" accept=".ppt, .pptx">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-block">
+                    <input type="text" placeholder="Project 1 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept=".ppt, .pptx">
+                </div>
+                <div class="project-block">
+                    <input type="text" placeholder="Project 2 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept=".ppt, .pptx">
+                </div>
+                <div class="project-block">
+                    <input type="text" placeholder="Project 3 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept=".ppt, .pptx">
+                </div>
+                <div class="project-block">
+                    <input type="text" placeholder="Project 4 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept=".ppt, .pptx">
+                </div>
+                <div class="project-block">
+                    <input type="text" placeholder="Project 5 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept=".ppt, .pptx">
+                </div>
             </div>
+        </div>
+
+        <!-- Publications -->
+        <div id="publications" class="tab">
+            <h2>Publications</h2>
+            <input type="file" accept=".pdf">
+            <input type="file" accept=".ppt, .pptx">
         </div>
 
     </div>
