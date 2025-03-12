@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li>About Me</li>
+                <li>Education</li>
+                <li>Skills</li>
+                <li>Experience</li>
+                <li>Projects</li>
+                <li>Publications</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section id="about">
+                <div class="background-upload">
+                    <input type="file" id="backgroundImage" accept="image/png">
+                    <label for="backgroundImage">Upload Background</label>
+                </div>
+                <div class="profile-upload">
+                    <input type="file" id="profileImage" accept="image/png">
+                    <label for="profileImage">Upload Profile Picture</label>
+                </div>
+                <textarea placeholder="Write about yourself..."></textarea>
+            </section>
+
+            <section id="education">
+                <div class="education-block">
+                    <input type="file" id="universityLogo1" accept="image/png">
+                    <label for="universityLogo1">Upload University Logo</label>
+                    <input type="text" placeholder="University Name">
+                    <input type="text" placeholder="Degree">
+                    <input type="text" placeholder="Cumulative GPA">
+                </div>
+                <div class="education-block">
+                    <input type="file" id="universityLogo2" accept="image/png">
+                    <label for="universityLogo2">Upload University Logo</label>
+                    <input type="text" placeholder="University Name">
+                    <input type="text" placeholder="Degree">
+                    <input type="text" placeholder="Cumulative GPA">
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="skill-category">Programming <textarea></textarea></div>
+                <div class="skill-category">Frameworks <textarea></textarea></div>
+                <div class="skill-category">Tools <textarea></textarea></div>
+                <div class="skill-category">Soft Skills <textarea></textarea></div>
+            </section>
+
+            <section id="projects">
+                <div class="project-block">
+                    <input type="text" placeholder="Project 1 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept="application/vnd.ms-powerpoint,.pptx">
+                </div>
+                <div class="project-block">
+                    <input type="text" placeholder="Project 2 Name">
+                    <input type="file" accept="image/png">
+                    <input type="file" accept="application/vnd.ms-powerpoint,.pptx">
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+/* CSS (styles.css) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 25%;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.education-block, .project-block, .skill-category {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type='file'], textarea {
+    display: block;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
