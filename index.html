@@ -9,121 +9,98 @@
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>Dashboard</h2>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <h2>Shreya Umesh Naidu</h2>
         <ul>
-            <li onclick="showTab('about')">About Me</li>
-            <li onclick="showTab('education')">Education</li>
-            <li onclick="showTab('skills')">Skills</li>
-            <li onclick="showTab('experience')">Experience</li>
-            <li onclick="showTab('projects')">Projects</li>
-            <li onclick="showTab('publications')">Publications</li>
-            <li onclick="showTab('contact')">Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-icons">
             <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/shreya" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-    </div>
+    </nav>
 
     <!-- Main Content -->
     <div class="main-content">
 
-        <!-- About Me -->
-        <div id="about" class="tab active">
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Hello, I'm Shreya</h1>
+            <p>A passionate Computer Science graduate specializing in AI/ML, Cloud Computing, and Full-Stack Development.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
             <h2>About Me</h2>
-            <div class="profile-section">
-                <img id="profilePreview" class="profile-pic" src="images/profile.png" alt="Profile Picture">
+            <div class="about-container">
+                <img src="images/profile.png" alt="Profile Picture">
+                <p>I am a motivated software engineer with experience in AI, deep learning, and UI/UX. Skilled in Python, Java, SQL, and cloud technologies.</p>
             </div>
-            <textarea readonly>
-A motivated Computer Science graduate skilled in Python, Java, SQL, and cloud technologies like Microsoft Azure. 
-Experienced in inventory optimization, UI/UX design, and machine learning. Certified in Machine Learning and AWS Cloud Foundations.
-            </textarea>
-        </div>
+        </section>
 
-        <!-- Education -->
-        <div id="education" class="tab">
-            <h2>Education</h2>
-            <div class="education-block">
-                <img class="university-logo" src="images/uta.png" alt="UTA Logo">
-                <input type="text" value="University of Texas at Arlington" readonly>
-                <input type="text" value="Master of Science in Computer Science" readonly>
-                <input type="text" value="GPA: 3.7/4" readonly>
-                <input type="text" value="Aug 2024 – Present" readonly>
-            </div>
-            <div class="education-block">
-                <img class="university-logo" src="images/gsss.png" alt="GSSS Logo">
-                <input type="text" value="GSSS Institute of Engineering and Technology" readonly>
-                <input type="text" value="Bachelor of Engineering in Computer Science" readonly>
-                <input type="text" value="GPA: 8.48/10" readonly>
-                <input type="text" value="Sept 2020 – Aug 2024" readonly>
-            </div>
-        </div>
-
-        <!-- Skills -->
-        <div id="skills" class="tab">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category"><h3>Programming</h3><textarea readonly>Python, Java, SQL, C, Perl</textarea></div>
-                <div class="skill-category"><h3>AI/ML</h3><textarea readonly>Deep Learning, Generative AI, LLM</textarea></div>
-                <div class="skill-category"><h3>Cloud & Web</h3><textarea readonly>Microsoft Azure, WordPress, Power BI</textarea></div>
-                <div class="skill-category"><h3>Leadership</h3><textarea readonly>Problem-Solving, Critical Thinking</textarea></div>
-            </div>
-        </div>
-
-        <!-- Experience -->
-        <div id="experience" class="tab">
+        <!-- Experience Section -->
+        <section id="experience">
             <h2>Experience</h2>
             <div class="experience-container">
-                <div class="experience-block">
-                    <h3>Honeywell Technology Solution</h3>
-                    <input type="text" value="Intern - Bachelors Software Engineer" readonly>
-                    <input type="text" value="Bengaluru, India" readonly>
-                    <input type="text" value="Feb 2024 – July 2024" readonly>
-                    <textarea readonly>Optimized inventory management using SciPy, fuzzy string-matching, and multiprocessing. Developed an efficient system to automate redistribution strategies.</textarea>
-                    <label>Upload Experience Presentation:</label>
+                <div class="experience-box">
+                    <h3>Honeywell Technology Solutions</h3>
+                    <p>Intern - Bachelors Software Engineer</p>
+                    <p>Bangalore, India | Feb 2024 – July 2024</p>
+                    <p>Worked on AI-driven inventory management optimization using SciPy and Fuzzy Logic.</p>
+                    <label>Upload Experience PPT:</label>
                     <input type="file" accept=".ppt, .pptx">
                 </div>
-            </div>
-        </div>
 
-        <!-- Projects -->
-        <div id="projects" class="tab">
+                <div class="experience-box">
+                    <h3>Varcon's Technologies Pvt Ltd</h3>
+                    <p>UI/UX Intern</p>
+                    <p>Aug 2023 – Sept 2023</p>
+                    <p>Designed user-centric UI interfaces and conducted usability testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
             <h2>Projects</h2>
             <div class="project-container">
-                <div class="project-block">
+                <div class="project-box">
                     <img src="images/project1.png" alt="Project 1">
-                    <input type="text" value="Human Age & Gender Estimation" readonly>
-                    <textarea readonly>Developed a real-time system using CNNs and Haar Cascades.</textarea>
-                    <label>Upload Project Presentation:</label>
+                    <h3>Human Age & Gender Estimation</h3>
+                    <p>Developed a deep learning model for real-time age and gender detection.</p>
+                    <label>Upload Project PPT:</label>
                     <input type="file" accept=".ppt, .pptx">
                 </div>
-                <div class="project-block">
+
+                <div class="project-box">
                     <img src="images/project2.png" alt="Project 2">
-                    <input type="text" value="Student Feedback System" readonly>
-                    <textarea readonly>Designed a system using MySQL, PHP, and HTML for feedback analysis.</textarea>
-                    <label>Upload Project Presentation:</label>
+                    <h3>Student Feedback System</h3>
+                    <p>Created a feedback analysis system using MySQL, PHP, and HTML.</p>
+                    <label>Upload Project PPT:</label>
                     <input type="file" accept=".ppt, .pptx">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Publications -->
-        <div id="publications" class="tab">
-            <h2>Publications</h2>
-            <input type="text" value="Human Age & Gender Estimation (IARJSET)" readonly>
-        </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
     </div>
-
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
 
 </body>
 </html>
